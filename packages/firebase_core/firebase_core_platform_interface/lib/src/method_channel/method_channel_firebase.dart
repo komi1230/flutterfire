@@ -130,10 +130,9 @@ class MethodChannelFirebase extends FirebasePlatform {
                 _options.databaseURL != defaultApp.options.databaseURL) ||
             (_options.storageBucket != null &&
                 _options.storageBucket != defaultApp.options.storageBucket)) {
-          // Options are different; throw.
-          throw duplicateApp(defaultFirebaseAppName);
+          // Default options will be overridden
+          return MethodChannelFirebaseApp(defaultFirebaseAppName, _options);
         }
-        // Options are roughly the same; so we'll return the existing app.
       }
 
       return appInstances[defaultFirebaseAppName]!;
