@@ -9,9 +9,21 @@ environment:
   flutter: '>=1.12.13+hotfix.4'
 
 dependencies:
-  firebase_analytics_platform_interface: ^3.3.4
-  firebase_core: ^1.10.0
-  firebase_core_web: ^1.7.2
+  firebase_analytics_platform_interface:
+    git:
+      url: https://github.com/komi1230/flutterfire
+      ref: patch/streets
+      path: packages/firebase_analytics/firebase_analytics_platform_interface
+  firebase_core:
+    git:
+      url: https://github.com/komi1230/flutterfire
+      ref: patch/streets
+      path: packages/firebase_core/firebase_core
+  firebase_core_web:
+    git:
+      url: https://github.com/komi1230/flutterfire
+      ref: patch/streets
+      path: packages/firebase_core/firebase_core_web
   flutter:
     sdk: flutter
   flutter_web_plugins:
